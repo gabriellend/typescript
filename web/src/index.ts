@@ -1,6 +1,7 @@
 import { UserList } from "./views/UserList";
 import { Collection } from "./models/Collection";
 import { User, UserProps } from "./models/User";
+import { ApiSync } from "./models/ApiSync";
 
 const users = new Collection('http://localhost:3000/users', 
   (json: UserProps) => {
@@ -16,5 +17,11 @@ users.on ('change', () => {
   }
 });
 
-users.fetch();
+users.fetchAll();
+
+users.fetchOne(5);
+
+
+
+
 
