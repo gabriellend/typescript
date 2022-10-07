@@ -50,11 +50,11 @@ printAnything([1, 2, 3]); // type inference
 printAnything<string>(['a', 'b', 'c']); // Best to always include the generic
 
 // GENERIC CONSTRAINS
-class Boat {
-  print(){
-    console.log('I am a boat');
-  }
-}
+// class Boat {
+//   print(){
+//     console.log('I am a boat');
+//   }
+// }
 
 class House {
   print() {
@@ -73,5 +73,5 @@ function printBoatsOrHouses<T extends Printable>(arr: T[]): void {
   }
 }
 
-printBoatsOrHouses([1, 2, 3]); // Does not satisfy the constraint of Printable
+// printBoatsOrHouses([1, 2, 3]); // Does not satisfy the constraint of Printable
 printBoatsOrHouses<House>([new House(), new House(), new House()])
