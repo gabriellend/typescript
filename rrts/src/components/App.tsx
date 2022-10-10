@@ -14,6 +14,6 @@ export class App extends React.Component<AppProps> {
   }
 }
 
-const mapStateToProps = (state: StoreState): { todos: Todo[] } => {
-  return { todos: state.todos };
+const mapStateToProps = ({ todos }: StoreState): { todos: Todo[] } => {
+  return { todos };
 };
